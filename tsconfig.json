@@ -5,6 +5,9 @@
             "path": "./apps/cli/tsconfig.json"
         },
         {
+            "path": "./apps/cli-alt/tsconfig.json"
+        },
+        {
             "path": "./apps/sentry-client-desktop/tsconfig.json"
         },
         {

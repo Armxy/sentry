@@ -1,0 +1,27 @@
+{
+  "name": "@sentry/sentry-node-cli-alt",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npm run compile && npm run transpile && pkg ./build/sentry-node-cli-alt.js --targets=node18-linux-x64,node18-macos-x64,node18-win-x64 --output=release/xai",
+    "clean": "rimraf dist && rimraf release && rimraf build && rimraf tsconfig.tsbuildinfo",
+    "compile": "tsc",
+    "lint": "eslint . --ext .ts,.tsx",
+    "start": "node dist/index.js",
+    "transpile": "esbuild --bundle --outfile=./build/sentry-node-cli-alt.js --platform=node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/core": "workspace:*",
+    "commander": "^11.1.0",
+    "meow": "^12.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "esbuild": "^0.19.4",
+    "pkg": "^5.8.1"
+  }
+}

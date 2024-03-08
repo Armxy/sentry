@@ -17,7 +17,7 @@ try {
 }
 
 program
-    .version("1.0.80")
+    .version("1.1.4")
     .name('xai-cli')
     .description('Alternate version of XAI CLI')
     .version(process.env.npm_package_version as string);

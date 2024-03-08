@@ -7,7 +7,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm recursive run build",
+    "build": "pnpm -r --filter !xai-staking-internal run build",
     "clean": "pnpm recursive run clean",
     "cli-alt": "pnpm -filter @sentry/core run build && pnpm -r -filter @sentry/sentry-node-cli-alt run compile && pnpm -r -filter @sentry/sentry-node-cli-alt run start boot-operator",
     "cli": "pnpm -filter @sentry/core run build && pnpm -r -filter @sentry/sentry-node-cli run compile && pnpm -r -filter @sentry/sentry-node-cli run start",
